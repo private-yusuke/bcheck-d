@@ -78,6 +78,15 @@ class Student
     }
 
     /**
+     * 取得済み単位数の総和を返します。
+     */
+    float getPassedCreditSum()
+    {
+        return this.getPassedCourses().map!(course => course.credit)
+            .reduce!((a, b) => a + b);
+    }
+
+    /**
      * 与えられた科目番号に対応する科目の単位が取れている場合は true を、そうでない場合は false を返します。
      */
     bool hasPassed(string courseId)

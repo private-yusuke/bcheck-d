@@ -65,11 +65,11 @@ int main2(string[] args)
 	string rulesJSONContent = rulesFile.byLineCopy(Yes.keepTerminator).join.array.to!string;
 
 	Student s = toStudents(csvContent)[0];
-	s.gradePointAverage.writeln;
-	s.gradePointSum.writeln;
 
 	GraduationValidator gv = new GraduationValidator(toRules(rulesJSONContent));
 	gv.getValidationResult(s).writeln;
+	"GPA: %f".writefln(s.gradePointAverage());
+	"取得済み単位数: %f".writefln(s.getPassedCreditSum());
 
 	return 0;
 }
