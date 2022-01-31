@@ -54,7 +54,7 @@ class NameRegexMatchRule : Rule
     }
 
     /**
-     * 与えられた正規表現にマッチするような科目番号に対応する科目であって、単位を取れているものの配列を返します。
+     * 与えられた正規表現にマッチするような科目名に対応する科目であって、単位を取れているものの配列を返します。
      */
     private Course[] getRegexPassedCourses(Student student)
     {
@@ -72,7 +72,7 @@ class NameRegexMatchRule : Rule
     }
 
     /**
-     * 与えられた正規表現にマッチするような科目番号に対応する科目であって、履修中のものの配列を返します。
+     * 与えられた正規表現にマッチするような科目名に対応する科目であって、履修中のものの配列を返します。
      */
     Course[] getRegexInProgressCourses(Student student)
     {
@@ -90,7 +90,7 @@ class NameRegexMatchRule : Rule
     }
 
     /**
-     * 与えられた正規表現にマッチするような科目番号に対応する科目であって、単位を取れているものの単位数の総和を返します。
+     * 与えられた正規表現にマッチするような科目名に対応する科目であって、単位を取れているものの単位数の総和を返します。
      */
     float regexPassedCount(Student student)
     {
@@ -118,7 +118,7 @@ class NameRegexMatchRule : Rule
     }
 
     /**
-     * 与えられた正規表現にマッチするような科目番号に対応する科目であって、履修中の単位の単位数の総和を返します。
+     * 与えられた正規表現にマッチするような科目名に対応する科目であって、履修中の単位の単位数の総和を返します。
      */
     float regexInProgressCount(Student student)
     {
