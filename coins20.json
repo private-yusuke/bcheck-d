@@ -1,0 +1,298 @@
+[
+    {
+        "id": "information_system_laboratory",
+        "type": "regex_match",
+        "name": "専門科目/必修科目/情報システム実験A,情報システム実験B",
+        "matcher": "^GB36[45]03$",
+        "min": 18.0,
+        "max": -1.0
+    },
+    {
+        "id": "sotsuken",
+        "type": "regex_match",
+        "name": "専門科目/必修科目/卒業研究A,卒業研究B",
+        "matcher": "^GB199[4589]8$",
+        "min": 18.0,
+        "max": -1.0
+    },
+    {
+        "id": "senmon_gogaku",
+        "type": "regex_match",
+        "name": "専門科目/必修科目/専門語学A,専門語学B",
+        "matcher": "^GB190[4578]1$",
+        "min": 18.0,
+        "max": -1.0
+    },
+    {
+        "id": "starts_With_gb20_gb30_gb40",
+        "type": "regex_match",
+        "name": "専門科目/選択科目/科目番号がGB20, GB30, GB40で始まる科目",
+        "matcher": "^GB[2-4]0.*$",
+        "min": 18.0,
+        "max": -1.0
+    },
+    {
+        "id": "starts_With_gb2_gb3_gb4_ga4_special_seminar",
+        "type": "regex_match",
+        "name": "専門科目/選択科目/科目番号がGB2, GB3, GB4, GA4で始まる科目,情報科学特別演習,情報特別演習I,情報特別演習II",
+        "matcher": "^((?=GB[2-4]|GA4)(?!(GB[2-4]0))|GB13332|GB13312|GB13322).*$",
+        "min": 18.0,
+        "max": -1.0
+    },
+    {
+        "id": "laA",
+        "type": "exact_match",
+        "name": "専門基礎科目/必修科目/線形代数A",
+        "course_id": "GA15211"
+    },
+    {
+        "id": "laB",
+        "type": "exact_match",
+        "name": "専門基礎科目/必修科目/線形代数B",
+        "course_id": "GB10234"
+    },
+    {
+        "id": "calculusA",
+        "type": "exact_match",
+        "name": "専門基礎科目/必修科目/微分積分A",
+        "course_id": "GA15311"
+    },
+    {
+        "id": "calculusB",
+        "type": "exact_match",
+        "name": "専門基礎科目/必修科目/微分積分B",
+        "course_id": "GB10444"
+    },
+    {
+        "id": "imA",
+        "type": "exact_match",
+        "name": "専門基礎科目/必修科目/情報数学A",
+        "course_id": "GA15111"
+    },
+    {
+        "id": "basic_specialized_english",
+        "type": "exact_match",
+        "name": "専門基礎科目/必修科目/専門英語基礎",
+        "course_id": "GB19061"
+    },
+    {
+        "id": "introduction_to_programming",
+        "type": "exact_match",
+        "name": "専門基礎科目/必修科目/プログラミング入門",
+        "course_id": "GA18112"
+    },
+    {
+        "id": "computers_and_programming",
+        "type": "exact_match",
+        "name": "専門基礎科目/必修科目/コンピュータとプログラミング",
+        "course_id": "GB11964"
+    },
+    {
+        "id": "dsa",
+        "type": "exact_match",
+        "name": "専門基礎科目/必修科目/データ構造とアルゴリズム",
+        "course_id": "GB11931"
+    },
+    {
+        "id": "dsal",
+        "type": "exact_match",
+        "name": "専門基礎科目/必修科目/データ構造とアルゴリズム実験",
+        "course_id": "GB11956"
+    },
+    {
+        "id": "logic_circuit",
+        "type": "exact_match",
+        "name": "専門基礎科目/必修科目/論理回路",
+        "course_id": "GB10804"
+    },
+    {
+        "id": "logic_circuit_laboratory",
+        "type": "exact_match",
+        "name": "専門基礎科目/必修科目/論理回路実験",
+        "course_id": "GB12017"
+    },
+    {
+        "id": "basic_specialized_required",
+        "type": "addition",
+        "name": "専門基礎科目/必修科目",
+        "rules": [
+            "laA",
+            "laB",
+            "calculusA",
+            "calculusB",
+            "imA",
+            "basic_specialized_english",
+            "introduction_to_programming",
+            "computers_and_programming",
+            "dsa",
+            "dsal",
+            "logic_circuit",
+            "logic_circuit_laboratory"
+        ],
+        "min": 26.0,
+        "max": -1.0
+    },
+    {
+        "id": "basic_specialized_10",
+        "type": "regex_match",
+        "name": "専門基礎科目/選択科目/確率論,統計学,数値計算法,論理と形式化,電磁気学,論理システム,論理システム演習",
+        "matcher": "^(GB11601|GB11621|GB12301|GB12601|GB11404|GB12801|GB12812)$",
+        "min": 10.0,
+        "max": -1.0
+    },
+    {
+        "id": "computer_science_in_english",
+        "type": "regex_match",
+        "name": "専門基礎科目/選択科目/Computer Science in English A,Computer Science in English B",
+        "matcher": "^(GB13614|GB13624)$",
+        "min": 2.0,
+        "max": -1.0
+    },
+    {
+        "id": "starts_with_GB1",
+        "type": "regex_match",
+        "name": "専門基礎科目/選択科目/科目番号がGB1で始まる科目（ただし、情報科学特別演習、情報特別演習I、情報特別演習IIは除く）",
+        "matcher": "^(?=GB1)(?!(GB13332|GB13312|GB13322|GB11601|GB11621|GB12301|GB12601|GB11404|GB12801|GB12812|GB10234|GB10444|GB19061|GB11964|GB11931|GB11956|GB10804|GB12017)).*$",
+        "min": 0.0,
+        "max": -1.0
+    },
+    {
+        "id": "starts_with_GA1",
+        "type": "regex_match",
+        "name": "専門基礎科目/選択科目/科目番号がGA1で始まる科目",
+        "matcher": "^(?=GA1)(?!(GA15211|GA15311|GA15111|GA18112)).*$",
+        "min": 8.0,
+        "max": -1.0
+    },
+    {
+        "id": "basic_specialized_selection",
+        "type": "addition",
+        "name": "専門基礎科目/選択科目",
+        "rules": [
+            "basic_specialized_10",
+            "computer_science_in_english",
+            "starts_with_GB1",
+            "starts_with_GA1"
+        ],
+        "min": 24.0,
+        "max": -1.0
+    },
+    {
+        "id": "freshman_seminar",
+        "type": "regex_match",
+        "name": "基礎科目/共通科目/必修科目/総合科目（フレッシュマン・セミナー）",
+        "matcher": "^1118.*$",
+        "min": 1.0,
+        "max": -1.0
+    },
+    {
+        "id": "introduction_to_academy",
+        "type": "regex_match",
+        "name": "基礎科目/共通科目/必修科目/総合科目（学問への誘い）",
+        "matcher": "^1227.*$",
+        "min": 1.0,
+        "max": -1.0
+    },
+    {
+        "id": "freshman_seminar_and_introduction_to_academy",
+        "type": "addition",
+        "name": "基礎科目/共通科目/必修科目/総合科目（フレッシュマン・セミナー、学問への誘い）",
+        "rules": [
+            "freshman_seminar",
+            "introduction_to_academy"
+        ],
+        "min": 2.0,
+        "max": -1.0
+    },
+    {
+        "id": "required_pe",
+        "type": "regex_match",
+        "name": "基礎科目/共通科目/必修科目/体育",
+        "matcher": "^2(1|2)[0-5].*$",
+        "min": 2.0,
+        "max": -1.0
+    },
+    {
+        "id": "required_english",
+        "type": "name_regex_match",
+        "name": "基礎科目/共通科目/必修科目/外国語（英語）",
+        "matcher": "English (Presentation|Reading) Skills",
+        "min": 4.0,
+        "max": -1.0
+    },
+    {
+        "id": "informatics",
+        "type": "regex_match",
+        "name": "基礎科目/共通科目/必修科目/情報",
+        "matcher": "^(6124101|6424102|6524102)$",
+        "min": 4.0,
+        "max": -1.0
+    },
+    {
+        "id": "basic_common_required",
+        "type": "addition",
+        "name": "基礎科目/共通科目/必修科目",
+        "rules": [
+            "freshman_seminar_and_introduction_to_academy",
+            "required_pe",
+            "required_english",
+            "informatics"
+        ],
+        "min": 12.0,
+        "max": -1.0
+    },
+    {
+        "id": "gakushi_kiban",
+        "type": "regex_match",
+        "name": "基礎科目/共通科目/選択科目（学士基盤科目）",
+        "matcher": "^(?=12)(?!(1118|1227)).*$",
+        "min": 1.0,
+        "max": -1.0
+    },
+    {
+        "id": "common_misc",
+        "type": "regex_match",
+        "name": "基礎科目/共通科目/選択科目/体育,外国語,国語,芸術",
+        "matcher": "^(?=(2|3|5|4))(?!(2(1|2)[0-5]|1118|1227|31HG|31KG|31JG|31LG)).*$",
+        "min": 0.0,
+        "max": 4.0
+    },
+    {
+        "id": "basic_common_selection",
+        "name": "基礎科目/共通科目/選択科目",
+        "type": "addition",
+        "rules": [
+            "gakushi_kiban",
+            "common_misc"
+        ],
+        "min": 1.0,
+        "max": 5.0
+    },
+    {
+        "id": "bunkei",
+        "name": "基礎科目/関連科目/選択科目/「E, F, G, Hで始まる科目、共通科目及び教職に関する科目」以外の科目",
+        "type": "regex_match",
+        "matcher": "^(?!(E|F|G|H|2(1|2)[0-5]|1118|12|31HG|31KG|31JG|31LG|6124101|6424102|6524102|3[2-7])).*$",
+        "min": 6.0,
+        "max": -1.0
+    },
+    {
+        "id": "rikei",
+        "name": "基礎科目/関連科目/選択科目/E, F, GC, GE, Hで始まる科目",
+        "type": "regex_match",
+        "matcher": "^(E|F|GC|GE|H).*$",
+        "min": 0.0,
+        "max": 4.0
+    },
+    {
+        "id": "basic_related_selection",
+        "name": "基礎科目/関連科目",
+        "type": "addition",
+        "rules": [
+            "bunkei",
+            "rikei"
+        ],
+        "min": 6.0,
+        "max": 10.0
+    },
+]

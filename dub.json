@@ -1,0 +1,25 @@
+{
+	"authors": [
+		"public_yusuke"
+	],
+	"configurations": [
+		{
+			"name": "executable",
+			"targetType": "executable"
+		},
+		{
+			"dependencies": {
+				"silly": "~>1.1.1"
+			},
+			"name": "unittest",
+			"targetType": "library"
+		}
+	],
+	"copyright": "Copyright © 2022, public_yusuke",
+	"dependencies": {
+		"colorize": "~>1.0.5"
+	},
+	"description": "An application to check whether you as a coins20 student can graduate or not.",
+	"license": "MIT",
+	"name": "bcheck-d"
+}

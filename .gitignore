@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/bcheck-d
+bcheck-d.so
+bcheck-d.dylib
+bcheck-d.dll
+bcheck-d.a
+bcheck-d.lib
+bcheck-d-test-*
+*.exe
+*.o
+*.obj
+*.lst
