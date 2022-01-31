@@ -7,6 +7,9 @@ import student;
 import grade;
 import rating;
 
+/**
+ * 単位の取れている科目のうち、完全一致する科目番号があるか確認するための Rule
+ */
 class ExactMatchRule : Rule
 {
     string _id;

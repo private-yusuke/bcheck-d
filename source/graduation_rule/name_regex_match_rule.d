@@ -6,6 +6,9 @@ import graduation_rule.graduation_validator;
 import student;
 import course;
 
+/**
+ * 単位を取れている科目の名前に対して正規表現でマッチした個数を数えて最低を上回っているか確認するための Rule
+ */
 class NameRegexMatchRule : Rule
 {
     string _id;

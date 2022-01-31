@@ -7,6 +7,9 @@ import student;
 import grade;
 import rating;
 
+/**
+ * 他の Rule で数え上げられている取得済み単位の数を合わせたときに最低数を上回っているか確認するための Rule
+ */
 class AdditionRule : Rule
 {
     string _id;

@@ -17,6 +17,7 @@ struct ProgramOption
 	string rulesFilePath;
 }
 
+// unittest のランナーを silly にするときの代償
 version (unittest)
 {
 }
@@ -64,6 +65,8 @@ int main2(string[] args)
 	File rulesFile = programOption.rulesFilePath ? File(programOption.rulesFilePath) : stdin;
 	string rulesJSONContent = rulesFile.byLineCopy(Yes.keepTerminator).join.array.to!string;
 
+	// TODO: 複数の生徒について同時に裁けるようにする（stdin に cat で入ってきた複数の生徒のデータを処理するイメージ）
+	// 以下にある表示部分を対応させれば実現可能
 	Student s = toStudents(csvContent)[0];
 
 	GraduationValidator gv = new GraduationValidator(toRules(rulesJSONContent));
