@@ -4,24 +4,24 @@
         "type": "regex_match",
         "name": "専門科目/必修科目/情報システム実験A,情報システム実験B",
         "matcher": "^GB36[45]03$",
-        "min": 18.0,
-        "max": -1.0
+        "min": 6.0,
+        "max": 6.0
     },
     {
         "id": "sotsuken",
         "type": "regex_match",
         "name": "専門科目/必修科目/卒業研究A,卒業研究B",
         "matcher": "^GB199[4589]8$",
-        "min": 18.0,
-        "max": -1.0
+        "min": 6.0,
+        "max": 6.0
     },
     {
         "id": "senmon_gogaku",
         "type": "regex_match",
         "name": "専門科目/必修科目/専門語学A,専門語学B",
         "matcher": "^GB190[4578]1$",
-        "min": 18.0,
-        "max": -1.0
+        "min": 4.0,
+        "max": 4.0
     },
     {
         "id": "starts_With_gb20_gb30_gb40",
@@ -36,8 +36,8 @@
         "type": "regex_match",
         "name": "専門科目/選択科目/科目番号がGB2, GB3, GB4, GA4で始まる科目,情報科学特別演習,情報特別演習I,情報特別演習II",
         "matcher": "^((?=GB[2-4]|GA4)(?!(GB[2-4]0))|GB13332|GB13312|GB13322).*$",
-        "min": 18.0,
-        "max": -1.0
+        "min": 0.0,
+        "max": 18.0
     },
     {
         "id": "laA",
@@ -130,7 +130,7 @@
             "logic_circuit_laboratory"
         ],
         "min": 26.0,
-        "max": -1.0
+        "max": 26.0
     },
     {
         "id": "basic_specialized_10",
@@ -175,34 +175,15 @@
             "starts_with_GA1"
         ],
         "min": 24.0,
-        "max": -1.0
-    },
-    {
-        "id": "freshman_seminar",
-        "type": "regex_match",
-        "name": "基礎科目/共通科目/必修科目/総合科目（フレッシュマン・セミナー）",
-        "matcher": "^1118.*$",
-        "min": 1.0,
-        "max": -1.0
-    },
-    {
-        "id": "introduction_to_academy",
-        "type": "regex_match",
-        "name": "基礎科目/共通科目/必修科目/総合科目（学問への誘い）",
-        "matcher": "^1227.*$",
-        "min": 1.0,
-        "max": -1.0
+        "max": 24.0
     },
     {
         "id": "freshman_seminar_and_introduction_to_academy",
-        "type": "addition",
+        "type": "regex_match",
         "name": "基礎科目/共通科目/必修科目/総合科目（フレッシュマン・セミナー、学問への誘い）",
-        "rules": [
-            "freshman_seminar",
-            "introduction_to_academy"
-        ],
+        "matcher": "^(1118|1227).*$",
         "min": 2.0,
-        "max": -1.0
+        "max": 2.0
     },
     {
         "id": "required_pe",
@@ -210,7 +191,7 @@
         "name": "基礎科目/共通科目/必修科目/体育",
         "matcher": "^2(1|2)[0-5].*$",
         "min": 2.0,
-        "max": -1.0
+        "max": 2.0
     },
     {
         "id": "required_english",
@@ -218,7 +199,7 @@
         "name": "基礎科目/共通科目/必修科目/外国語（英語）",
         "matcher": "English (Presentation|Reading) Skills",
         "min": 4.0,
-        "max": -1.0
+        "max": 4.0
     },
     {
         "id": "informatics",
@@ -226,7 +207,7 @@
         "name": "基礎科目/共通科目/必修科目/情報",
         "matcher": "^(6124101|6424102|6524102)$",
         "min": 4.0,
-        "max": -1.0
+        "max": 4.0
     },
     {
         "id": "basic_common_required",
@@ -239,7 +220,7 @@
             "informatics"
         ],
         "min": 12.0,
-        "max": -1.0
+        "max": 12.0
     },
     {
         "id": "gakushi_kiban",
@@ -294,5 +275,5 @@
         ],
         "min": 6.0,
         "max": 10.0
-    },
+    }
 ]
