@@ -40,6 +40,17 @@
         "max": 18.0
     },
     {
+        "id": "specialized_selection",
+        "type": "addition",
+        "name": "専門科目/選択科目",
+        "rules": [
+            "starts_With_gb20_gb30_gb40",
+            "starts_With_gb2_gb3_gb4_ga4_special_seminar"
+        ],
+        "min": 36.0,
+        "max": 36.0
+    },
+    {
         "id": "laA",
         "type": "exact_match",
         "name": "専門基礎科目/必修科目/線形代数A",
