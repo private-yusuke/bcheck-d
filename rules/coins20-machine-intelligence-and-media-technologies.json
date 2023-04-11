@@ -19,7 +19,7 @@
         "id": "senmon_gogaku",
         "type": "regex_match",
         "name": "専門科目/必修科目/専門語学A,専門語学B",
-        "matcher": "^GB190[4578]1$",
+        "matcher": "^GB19(09|11|14|10|12|15)1$",
         "min": 4.0,
         "max": 4.0
     },
