@@ -115,9 +115,6 @@ class Student
             .map!(p => p.key.credit)
             .reduce!((a, b) => a + b);
 
-        const N = 5;
-        gpaTargetCreditSum += N;
-
         return gpaTargetOverACreditSum / gpaTargetCreditSum;
     }
 
