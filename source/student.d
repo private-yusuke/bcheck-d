@@ -87,6 +87,41 @@ class Student
     }
 
     /**
+     * 取得済み単位数のうち、A 以上の評価を得られた単位の割合を返します。
+     */
+    float getRatioOfCoursesWithRatingOverA()
+    {
+        import std.algorithm : canFind;
+
+        const targetCourses = this
+            .grades
+            .byPair
+            .filter!(p =>
+                [
+                    Rating.APlus,
+                    Rating.A,
+                    Rating.B,
+                    Rating.C,
+                    // Rating.D,
+                ].canFind(p.value.rating)
+            ).array;
+
+        auto gpaTargetCreditSum = targetCourses
+            .map!(p => p.key.credit)
+            .reduce!((a, b) => a + b);
+
+        auto gpaTargetOverACreditSum = targetCourses
+            .filter!(p => [Rating.A, Rating.APlus].canFind(p.value.rating))
+            .map!(p => p.key.credit)
+            .reduce!((a, b) => a + b);
+
+        const N = 5;
+        gpaTargetCreditSum += N;
+
+        return gpaTargetOverACreditSum / gpaTargetCreditSum;
+    }
+
+    /**
      * 与えられた科目番号に対応する科目の単位が取れている場合は true を、そうでない場合は false を返します。
      */
     bool hasPassed(string courseId)

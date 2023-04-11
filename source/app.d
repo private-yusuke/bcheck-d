@@ -73,6 +73,7 @@ int main2(string[] args)
 	gv.getValidationResult(s).writeln;
 	"GPA: %f".writefln(s.gradePointAverage());
 	"取得済み単位数: %f".writefln(s.getPassedCreditSum());
+	"A 以上率: %f".writefln(s.getRatioOfCoursesWithRatingOverA());
 
 	return 0;
 }
